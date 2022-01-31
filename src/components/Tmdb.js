@@ -1,10 +1,17 @@
+const basicFetch = async (endpoint) => {
+    const req = await fetch(`${process.env.TMDB_API_BASE}${endpoint}`);
+    const json = await req.json();
+    return json;
+}
+
+
 export default {
     getHomeList: async () => {
         return [
             {
                 slug: 'originals',
                 title: 'Originales de Netflix',
-                items: []
+                items: await basicFetch(`/discover/tv`)
             },
             {
                 slug: 'trending',
