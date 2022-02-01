@@ -55,7 +55,12 @@ function App() {
           ))}
           {console.log(movieList)}
       </section>
-
+      
+      <footer>
+        Hecho con <span role='img' aria-label='heart'>❤️</span> Alejandro Pascuale <br></br>
+        Derechos de imagen para Netflix <br></br>
+        Datos tomados del sitio Themoviedb.org
+      </footer>
     </div>
   );
 }
