@@ -4,6 +4,7 @@ import MovieRow from './components/MovieRow';
 import Tmdb from './components/Tmdb';
 import FeatureMovie from './components/FeatureMovie';
 import Header from './components/Header';
+import { TailSpin } from  'react-loader-spinner'
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -61,6 +62,12 @@ function App() {
         Derechos de imagen para Netflix <br></br>
         Datos tomados del sitio Themoviedb.org
       </footer>
+
+      {movieList.length <= 0 &&
+        <div className='loading'>
+            <TailSpin color='red' />
+        </div>
+      }
     </div>
   );
 }
