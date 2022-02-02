@@ -9,7 +9,8 @@
     padding-left: 30px;
 }
 .movieRow--list {
-    width: 99999999999px;
+    width: 9999999999999px;
+    transition: all ease 0.5s;
 }
 .movieRow--item {
     display: inline-block;
